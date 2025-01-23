@@ -2,6 +2,7 @@ import UIKit
 import React
 import React_RCTAppDelegate
 import ReactAppDependencyProvider
+import GoogleMaps 
 
 @main
 class AppDelegate: RCTAppDelegate {
@@ -9,8 +10,10 @@ class AppDelegate: RCTAppDelegate {
     self.moduleName = "finovaAppSupervisores"
     self.dependencyProvider = RCTAppDependencyProvider()
 
-    // You can add your custom initial props in the dictionary below.
-    // They will be passed down to the ViewController used by React Native.
+    // inicializa google maps con la api key
+    GMSServices.provideAPIKey("AIzaSyAo6_L2Z9A727HJKIU0K4PrrBelPUcIEdA") // reemplaza _YOUR_API_KEY_ con tu api key
+
+    // puedes agregar tus props iniciales aquí
     self.initialProps = [:]
 
     return super.application(application, didFinishLaunchingWithOptions: launchOptions)
